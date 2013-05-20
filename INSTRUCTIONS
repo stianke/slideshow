@@ -23,8 +23,8 @@ sudo apt-get install libreoffice
 sudo apt-get install usbmount
 
 #Copy .xsession to /home/pi - assuming this is the user id setup to run on bootup
-#This script starts the display manager and syncs the default user home with a fresh copy
-#from /media/usb/pi - it also deletes any previous LibreOffice config allowing clean start of slideshow
+#This script starts the display manager and syncs the default user home with a fresh copy from /media/usb/pi
+#It also deletes any previous LibreOffice config allowing clean start of slideshow
 wget https://raw.github.com/jb2cool/slideshow/master/.xsession
 
 #Insert the USB transfer stick
