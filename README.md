@@ -2,7 +2,7 @@ xsession script to run slideshow using libreoffice in kiosk style
 
 0.1 Release
 
-Copywrite 2013 Peter Milne
+Copywrite 2013 Jason Bramwell
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
