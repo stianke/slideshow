@@ -13,9 +13,9 @@ matchbox-window-manager &
 # run forever
 while true; do
 	# refresh home dir
-	rsync -qr --delete --exclude='.Xauthority' /opt/pi/ $HOME/
+	rsync -qr --delete --exclude='.Xauthority' /media/usb/pi/ $HOME/
 	# del libreoffice profile to avoid recovery mode
 	rm -r .config/libreoffice
 	# run libreoffice in kiosk mode
-	soffice -show slideshow.odp 
+	soffice -show slideshow.ppt 
 done
