@@ -1,8 +1,10 @@
 #Installation instructions for running Raspberry Pi slideshow
 
 #Install latest Raspbian OS to SD card and boot pi
+
 #Run through initial raspi-config and then boot into GUI
 
+#update repositry info and upgrade packages to latest versions
 sudo apt-get update
 sudo apt-get upgrade
 
