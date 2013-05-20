@@ -1,6 +1,7 @@
 #Installation instructions for running Raspberry Pi slideshow
 
 #Install latest Raspbian OS to SD card and boot pi
+#Run through initial raspi-config and then boot into GUI
 
 sudo apt-get update
 sudo apt-get upgrade
@@ -19,13 +20,12 @@ sudo apt-get install libreoffice
 #usbmount - mounts usb stick automatically
 sudo apt-get install usbmount
 
-#now you can insert the usb transfer stick
-
 #Copy .xsession to /home/pi - assuming this is the user id setup to run on bootup
 #This script starts the display manager and syncs the default user home with a fresh copy
 #from /media/usb - it also deletes any previous libreoffice config allowing clean start of slideshow
-
 wget https://raw.github.com/jb2cool/slideshow/master/.xsession
+
+#insert the usb transfer stick
 
 #Create a copy of the default user (pi) in /media/usb
 
