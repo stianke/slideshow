@@ -30,10 +30,10 @@ wget https://raw.github.com/jb2cool/slideshow/master/.xsession
 #Insert the USB transfer stick
 
 #Create a copy of the default user (pi) in /media/usb
-cp -r /home/pi /media/usb/
+sudo cp -r /home/pi /media/usb/
 cd /media/usb/pi/
-chmod -R a+r .
-chmod a+x .xsession
+sudo chmod -R a+r .
+sudo chmod a+x .xsession
 
 #Create a slidshow named slideshow.ppt and copy to /media/usb/pi - This will autostart on bootup
 
