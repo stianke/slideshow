@@ -2,43 +2,42 @@
 
 #Install latest Raspbian OS to SD card and boot pi
 
-#Run through initial raspi-config and then boot into GUI
+#Run through initial Raspi-Config and then boot into GUI
 
-#update repositry info and upgrade packages to latest versions
+#Update repositry info and upgrade packages to latest versions
 sudo apt-get update
 sudo apt-get upgrade
 
-#Install following applications:
+#Install following applications;
 
-#matchbox window manager - light weight window manager
+#Matchbox window manager - Light weight window manager
 sudo apt-get install matchbox
 
-#rsync - file synchronisation application
+#rsync - File synchronisation application
 sudo apt-get install rsync
 
-#libreoffice - office suite including presentation application
+#LibreOffice - Office suite including presentation application
 sudo apt-get install libreoffice
 
-#usbmount - mounts usb stick automatically
+#USBmount - Mounts usb stick automatically
 sudo apt-get install usbmount
 
 #Copy .xsession to /home/pi - assuming this is the user id setup to run on bootup
 #This script starts the display manager and syncs the default user home with a fresh copy
-#from /media/usb - it also deletes any previous libreoffice config allowing clean start of slideshow
+#from /media/usb/pi - it also deletes any previous LibreOffice config allowing clean start of slideshow
 wget https://raw.github.com/jb2cool/slideshow/master/.xsession
 
-#insert the usb transfer stick
+#Insert the USB transfer stick
 
 #Create a copy of the default user (pi) in /media/usb
-
 cp -r /home/pi /media/usb/
 cd /media/usb/pi/
 chmod -R a+r .
 chmod a+x .xsession
 
-#Create a slidshow named slideshow.ppt and copy to /media/usb/pi - this will autostart on bootup
+#Create a slidshow named slideshow.ppt and copy to /media/usb/pi - This will autostart on bootup
 
-#Restart the pi and stand back and enjoy your show 
+#Restart the Raspberry Pi, stand back and enjoy your show 
 
 #Thanks to Peter Milne for supplying the original code. I have only adjusted his work for my own use
 #https://github.com/milnepe/slideshow
