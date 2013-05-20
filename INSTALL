@@ -1,33 +1,42 @@
-Installation instructions for running Raspberry Pi slideshow
+#Installation instructions for running Raspberry Pi slideshow
 
-Install latest Raspbian OS to SD card and boot pi
+#Install latest Raspbian OS to SD card and boot pi
 
-Install following applications:
+sudo apt-get update
+sudo apt-get upgrade
 
-matchbox window manager - light weight window manager
+#Install following applications:
+
+#matchbox window manager - light weight window manager
 sudo apt-get install matchbox
 
-rsync - file synchronisation application
+#rsync - file synchronisation application
 sudo apt-get install rsync
 
-libreoffice - office suite including presentation application
+#libreoffice - office suite including presentation application
 sudo apt-get install libreoffice
 
-Copy .xsession to /home/pi - assuming this is the user id setup to run on bootup
-This script starts the display manager and syncs the default user home with a fresh copy
-from /opt - it also deletes any previous libreoffice config allowing clean start of slideshow
+#usbmount - mounts usb stick automatically
+sudo apt-get install usbmount
 
-Create a copy of the default user (pi) in /opt
+#now you can insert the usb transfer stick
 
-cp -r /home/pi /opt/
-cd /opt/pi/
+#Copy .xsession to /home/pi - assuming this is the user id setup to run on bootup
+#This script starts the display manager and syncs the default user home with a fresh copy
+#from /media/usb - it also deletes any previous libreoffice config allowing clean start of slideshow
+
+wget https://raw.github.com/jb2cool/slideshow/master/.xsession
+
+#Create a copy of the default user (pi) in /media/usb
+
+cp -r /home/pi /media/usb/
+cd /media/usb/pi/
 chmod -R a+r .
 chmod a+x .xsession
 
-Create a slidshow named slideshow.odp and copy to /opt/pi - this will autostart on bootup
+#Create a slidshow named slideshow.ppt and copy to /media/usb/pi - this will autostart on bootup
 
-Restart the pi and stand back and enjoy your show 
+#Restart the pi and stand back and enjoy your show 
 
-Thanks to Alan Moore for inspiration from his blog
-http://www.alandmoore.com/blog/2011/11/05/creating-a-kiosk-with-linux-and-x11-2011-edition/
-
+#Thanks to Alan Moore for inspiration from his blog
+#http://www.alandmoore.com/blog/2011/11/05/creating-a-kiosk-with-linux-and-x11-2011-edition/
