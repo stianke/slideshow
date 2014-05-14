@@ -25,9 +25,9 @@ sudo apt-get install usbmount
 #Copy .xsession to /home/pi - assuming this is the user id setup to run on bootup
 #This script starts the display manager and syncs the default user home with a fresh copy from /media/usb/pi
 #It also deletes any previous LibreOffice config allowing clean start of slideshow
-wget https://raw.github.com/jb2cool/slideshow/master/.xsession
+wget --no-check-certificate https://raw.github.com/jb2cool/slideshow/master/.xsession
 
-#Insert the USB transfer stick
+#Insert the USB transfer stick (should have name usb or you'll need to change some stuff)
 
 #Create a copy of the default user (pi) in /media/usb
 sudo cp -r /home/pi /media/usb/
@@ -35,7 +35,7 @@ cd /media/usb/pi/
 sudo chmod -R a+r .
 sudo chmod a+x .xsession
 
-#Create a slidshow named slideshow.ppt and copy to /media/usb/pi - This will autostart on bootup
+#Create a slideshow named slideshow.ppt and copy to /media/usb/pi - This will autostart on bootup
 
 #Restart the Raspberry Pi, stand back and enjoy your show 
 
