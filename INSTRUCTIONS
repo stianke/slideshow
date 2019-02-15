@@ -25,6 +25,9 @@ sudo apt-get install usbmount
 #Fix some issues that crept up when Devin moved to the Stretch release
 sudo sed -i 's/MountFlags=slave/MountFlags=shared/g' /lib/systemd/system/systemd-udevd.service
 
+#Reboot (to apply new mount settings)
+sudo reboot
+
 #Copy .xsession to /home/pi - assuming this is the user id setup to run on bootup
 #This script starts the display manager and syncs the default user home with a fresh copy from /media/usb/pi
 #It also deletes any previous LibreOffice config allowing clean start of slideshow
