@@ -30,7 +30,7 @@ sudo sed -i 's/MountFlags=slave/MountFlags=shared/g' /lib/systemd/system/systemd
 #It also deletes any previous LibreOffice config allowing clean start of slideshow
 wget --no-check-certificate https://raw.github.com/jb2cool/slideshow/master/.xsession
 
-#Insert the USB transfer stick (should have name usb or you'll need to change some stuff)
+#Insert the USB transfer stick (should be the label usb or you'll need to change some stuff)
 
 #Create a copy of the default user (pi) in /media/usb
 sudo cp -r /home/pi /media/usb/
