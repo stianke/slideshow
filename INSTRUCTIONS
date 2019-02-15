@@ -23,12 +23,7 @@ sudo apt-get install libreoffice
 sudo apt-get install usbmount
 
 #Fix some issues that crept up when Devin moved to the Stretch release
-sudo nano /lib/systemd/system/systemd-udevd.service
-
-Change the line
-MountFlags=slave
-to
-MountFlags=shared
+sudo sed -i 's/MountFlags=slave/MountFlags=shared/g' /lib/systemd/system/systemd-udevd.service
 
 #Copy .xsession to /home/pi - assuming this is the user id setup to run on bootup
 #This script starts the display manager and syncs the default user home with a fresh copy from /media/usb/pi
