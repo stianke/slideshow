@@ -22,7 +22,7 @@ sudo apt-get install libreoffice
 #USBmount - Mounts usb stick automatically
 sudo apt-get install usbmount
 
-#Fix some issues that crept up when Devin moved to the Stretch release
+#Fix some issues that crept up when Debian moved to the Stretch release
 sudo sed -i 's/MountFlags=slave/MountFlags=shared/g' /lib/systemd/system/systemd-udevd.service
 
 #Reboot (to apply new mount settings)
