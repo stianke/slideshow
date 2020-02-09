@@ -46,7 +46,7 @@ It also deletes any previous LibreOffice config allowing clean start of slidesho
 * To update the slideshow simply replace the slideshow.ppt file on the USB stick and reboot the Raspberry Pi with the USB stick plugged in (The USB stick is only needed for updating the presentation, without the USB stick it'll just play the last know presentation)   
 Restart the Raspberry Pi, stand back and enjoy your show   
 
-Thanks to Peter Milne for supplying the original code. I have only adjusted his work for my own use   
+Thanks to Peter Milne for supplying the original code. I have only adjusted his work for my own use (primarily by assing the USB stick updating function)   
 https://github.com/milnepe/slideshow   
 
 ## Version   
