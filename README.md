@@ -1,8 +1,5 @@
-# About
-Xsession script to run slideshow using LibreOffice in kiosk style
-
-# Version
-1.0 Release.
+# Slideshow
+An Xsession script to run a PowerPoint slideshow using LibreOffice in kiosk style. The device will boot and then automatically launch into the presentation, if slide timings are set up then these will be homoured. There is a favility to update the on-disk slideshow by using a USB stick that is inserted on boot but there are certain caveats with this.
 
 # Installation instructions for running Raspberry Pi slideshow   
 
@@ -52,6 +49,8 @@ Restart the Raspberry Pi, stand back and enjoy your show
 Thanks to Peter Milne for supplying the original code. I have only adjusted his work for my own use   
 https://github.com/milnepe/slideshow   
 
+## Version
+1.0 Release.
 
 Copyright 2020 Jason Bramwell.
 
