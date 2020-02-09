@@ -43,7 +43,7 @@ It also deletes any previous LibreOffice config allowing clean start of slidesho
   `sudo chmod a+x .xsession`   
 
 * Create a slideshow named slideshow.ppt and copy to /media/usb/pi - This will autostart on bootup   
-To update the slideshow simply replace the version on the USB stick and reboot with the USB stick plugged in (USB stick is only needed if you want to update the presentation, without the USB stick it'll just play the last know presentation)   
+* To update the slideshow simply replace the version on the USB stick and reboot with the USB stick plugged in (USB stick is only needed if you want to update the presentation, without the USB stick it'll just play the last know presentation)   
 Restart the Raspberry Pi, stand back and enjoy your show   
 
 Thanks to Peter Milne for supplying the original code. I have only adjusted his work for my own use   
