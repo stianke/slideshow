@@ -50,6 +50,9 @@ Thanks to Peter Milne for supplying the original code. I have only adjusted his 
 https://github.com/milnepe/slideshow   
 
 ## Version   
-1.0 Release   
+1.0 Release 
+
+## License    
+[GPL 3.0](https://raw.githubusercontent.com/jb2cool/slideshow/master/LICENSE)
 
 Copyright 2020 Jason Bramwell   
