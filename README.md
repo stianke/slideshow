@@ -1,4 +1,4 @@
-xsession script to run slideshow using libreoffice in kiosk style
+Xsession script to run slideshow using LibreOffice in kiosk style
 
 1.0 Release.
 
