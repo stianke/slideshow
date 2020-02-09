@@ -1,5 +1,5 @@
 # Slideshow
-An Xsession script to run a PowerPoint slideshow using LibreOffice in kiosk style. The device will boot and then automatically launch into the presentation, if slide timings are set up then these will be homoured. There is a favility to update the on-disk slideshow by using a USB stick that is inserted on boot but there are certain caveats with this.
+An Xsession script to run a PowerPoint slideshow using LibreOffice in kiosk style. The device will boot and then automatically launch into the presentation, if slide timings are set up then these will be honoured. There is a facility to update the on-disk slideshow by using a USB stick that is inserted on boot but there are certain caveats with this.
 
 # Installation instructions for running Raspberry Pi slideshow   
 
