@@ -54,5 +54,3 @@ https://github.com/milnepe/slideshow
 
 ## License    
 [GPL 3.0](https://raw.githubusercontent.com/jb2cool/slideshow/master/LICENSE)
-
-Copyright 2020 Jason Bramwell   
