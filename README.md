@@ -2,7 +2,7 @@ xsession script to run slideshow using libreoffice in kiosk style
 
 1.0 Release.
 
-Copyright 2019 Jason Bramwell.
+Copyright 2020 Jason Bramwell.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
