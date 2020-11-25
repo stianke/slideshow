@@ -18,7 +18,7 @@ An Xsession script to run a PowerPoint slideshow using LibreOffice in kiosk styl
   `sudo apt-get install rsync`   
 
   LibreOffice - Office suite including presentation application   
-  'sudo apt-get install libreoffice`   
+  `sudo apt-get install libreoffice`   
 
   USBmount - Mounts usb stick automatically   
   `sudo apt-get install usbmount`   
