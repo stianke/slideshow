@@ -17,5 +17,5 @@ while true; do
 	# del libreoffice profile to avoid recovery mode
 	rm -r .config/libreoffice
 	# run libreoffice in kiosk mode
-	soffice -show slideshow.pps
+	soffice -view slideshow.pps
 done
