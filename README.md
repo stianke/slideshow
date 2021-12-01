@@ -3,7 +3,7 @@ An Xsession script to run a PowerPoint slideshow using LibreOffice in kiosk styl
 
 # Installation instructions for running Raspberry Pi slideshow   
 
-* Install latest Raspbian OS to SD card and boot Raspberry Pi   
+* Install latest Raspberry Pi OS to SD card and boot Raspberry Pi   
 * Run through initial Raspi-Config and then boot into GUI   
 
 * Update repositry info and upgrade packages to latest versions   
