@@ -23,8 +23,9 @@ An Xsession script to run a PowerPoint slideshow using LibreOffice in kiosk styl
   USBmount - Mounts usb stick automatically   
   `sudo apt-get install usbmount`   
 
-* Fix some issues that crept in when Debian moved to the Stretch release   
-  `sudo sed -i 's/MountFlags=slave/MountFlags=shared/g' /lib/systemd/system/systemd-udevd.service`   
+* Fix some issues that crept in when Debian moved to the Bullseye release
+  `sudo mkdir /etc/systemd/system/systemd-udevd.service.d`
+  `wget --no-check-certificate https://raw.githubusercontent.com/jb2cool/slideshow/master/00-my-custom-mountflags.conf -O /etc/systemd/system/systemd-udevd.service.d/00-my-custom-mountflags.conf`
 
 * Reboot (to apply new mount settings)   
   `sudo reboot`   
@@ -42,7 +43,7 @@ It also deletes any previous LibreOffice config allowing clean start of slidesho
   `sudo chmod -R a+r .`   
   `sudo chmod a+x .xsession`   
 
-* Create a slideshow named slideshow.ppt and copy to /media/usb/pi - This will autostart on bootup   
+* Create a slideshow named slideshow.pps and copy to /media/usb/pi - This will autostart on bootup   
 * To update the slideshow simply replace the slideshow.ppt file on the USB stick and reboot the Raspberry Pi with the USB stick plugged in (The USB stick is only needed for updating the presentation, without the USB stick it'll just play the last know presentation)   
 Restart the Raspberry Pi, stand back and enjoy your show   
 
