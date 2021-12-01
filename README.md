@@ -23,8 +23,8 @@ An Xsession script to run a PowerPoint slideshow using LibreOffice in kiosk styl
   USBmount - Mounts usb stick automatically   
   `sudo apt-get install usbmount`   
 
-* Fix some issues that crept in when Debian moved to the Bullseye release
-  `sudo mkdir /etc/systemd/system/systemd-udevd.service.d`
+* Fix some issues that crept in when Debian moved to the Bullseye release    
+  `sudo mkdir /etc/systemd/system/systemd-udevd.service.d`    
   `wget --no-check-certificate https://raw.githubusercontent.com/jb2cool/slideshow/master/00-my-custom-mountflags.conf -O /etc/systemd/system/systemd-udevd.service.d/00-my-custom-mountflags.conf`
 
 * Reboot (to apply new mount settings)   
