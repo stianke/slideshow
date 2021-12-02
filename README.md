@@ -5,53 +5,20 @@ An Xsession script to run a PowerPoint slideshow using LibreOffice in kiosk styl
 
 * Install latest Raspberry Pi OS to SD card and boot Raspberry Pi   
 * Run through initial Raspi-Config and then boot into GUI   
+* Open a terminal or SSH onto the decice and issue the following commands    
+* `wget https://raw.githubusercontent.com/jb2cool/slideshow/master/install-slideshow.sh`   
+* `bash install-slideshow.sh`   
+* A USB stick will be provisioned as part of the installation process, you can use this to update the slideshow held on the device
+* Create an autoplay slideshow named slideshow.pps and copy into the Pi user home directory, this will autostart on bootup. You can skip this step and use the USB stick to populate this if you like   
+* To update the slideshow simply place the slideshow.pps file onto the USB stick in /media/usb/pi/ and reboot the Raspberry Pi with the USB stick plugged in, the Pi will then update the presentation that it holds with the presentation thats on the USB stick    
+* The USB stick is only needed for updating the presentation, without the USB stick it'll just play the last know presentation   
+* Restart the Raspberry Pi, stand back and enjoy your show   
 
-* Update repositry info and upgrade packages to latest versions   
-`sudo apt-get update`   
-`sudo apt-get dist-upgrade`   
-
-* Install following applications:   
-  Matchbox - Lightweight window manager    
-  `sudo apt-get install matchbox`   
-
-  rsync - File synchronisation application   
-  `sudo apt-get install rsync`   
-
-  LibreOffice - Office suite including presentation application   
-  `sudo apt-get install libreoffice`   
-
-  USBmount - Mounts usb stick automatically   
-  `sudo apt-get install usbmount`   
-
-* Fix some issues that crept in when Debian moved to the Bullseye release    
-  `sudo mkdir /etc/systemd/system/systemd-udevd.service.d`    
-  `wget --no-check-certificate https://raw.githubusercontent.com/jb2cool/slideshow/master/00-my-custom-mountflags.conf -O /etc/systemd/system/systemd-udevd.service.d/00-my-custom-mountflags.conf`
-
-* Reboot (to apply new mount settings)   
-  `sudo reboot`   
-
-* Copy .xsession to /home/pi - assuming pi is the user id setup to run on bootup   
-This script starts the display manager and syncs the default user home with a fresh copy from /media/usb/pi   
-It also deletes any previous LibreOffice config allowing clean start of slideshow   
-  `wget --no-check-certificate https://raw.github.com/jb2cool/slideshow/master/.xsession`   
-
-* Insert the USB transfer stick (should have the label usb or you'll need to change some stuff)   
-
-* Create a copy of the default user (pi) in /media/usb   
-  `sudo cp -r /home/pi /media/usb/`   
-  `cd /media/usb/pi/`   
-  `sudo chmod -R a+r .`   
-  `sudo chmod a+x .xsession`   
-
-* Create a slideshow named slideshow.pps and copy to /media/usb/pi - This will autostart on bootup   
-* To update the slideshow simply replace the slideshow.ppt file on the USB stick and reboot the Raspberry Pi with the USB stick plugged in (The USB stick is only needed for updating the presentation, without the USB stick it'll just play the last know presentation)   
-Restart the Raspberry Pi, stand back and enjoy your show   
-
-Thanks to Peter Milne for supplying the original code. I have only adjusted his work for my own use (primarily by assing the USB stick updating function)   
+Thanks to Peter Milne for supplying the original code. I have only adjusted his work for my own use (primarily by adding the USB stick updating function)   
 https://github.com/milnepe/slideshow   
 
 ## Version   
-1.0 Release 
+1.1 Release 
 
 ## License    
 [GPL 3.0](https://raw.githubusercontent.com/jb2cool/slideshow/master/LICENSE)
