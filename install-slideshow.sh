@@ -54,8 +54,8 @@ function install-slideshow-part2()
         wget --no-check-certificate https://raw.github.com/jb2cool/slideshow/master/files/.xsession
         
         # Insert the USB transfer stick (should have the label usb or you'll need to change some stuff)   
-        echo "insert USB stick now"
-        read -p "Press any key to continue..."
+        echo "Insert USB stick now"
+        read -p "Press any key to continue...(This may look like it's not doing much, just leave it alone)"
         
         # Create a copy of the default user (pi) in /media/usb
         sudo cp -r /home/pi /media/usb/
