@@ -28,8 +28,8 @@ function install-slideshow-part1()
 
         # Fix some issues that crept in when Debian moved to the Bullseye release
         sudo mkdir /etc/systemd/system/systemd-udevd.service.d
-        #sudo wget --no-check-certificate https://raw.githubusercontent.com/jb2cool/slideshow/master/00-my-custom-mountflags.conf -O /etc/systemd/system/systemd-udevd.service.d/00-my-custom-mountflags.conf
-        sudo wget -P /etc/systemd/system/systemd-udevd.service.d https://raw.githubusercontent.com/jb2cool/slideshow/master/00-my-custom-mountflags.conf
+        #sudo wget --no-check-certificate https://raw.githubusercontent.com/jb2cool/slideshow/master/files/00-my-custom-mountflags.conf -O /etc/systemd/system/systemd-udevd.service.d/00-my-custom-mountflags.conf
+        sudo wget -P /etc/systemd/system/systemd-udevd.service.d https://raw.githubusercontent.com/jb2cool/slideshow/master/files/00-my-custom-mountflags.conf
 
         # Create part1 flag file
         echo "Slideshow part 1 has been completed" > ~/slideshow.part1
@@ -51,7 +51,7 @@ function install-slideshow-part2()
         # This script starts the display manager and syncs the default user home with a fresh copy from /media/usb/pi
         # It also deletes any previous LibreOffice config allowing clean start of slideshow
         cd $HOME
-        wget --no-check-certificate https://raw.github.com/jb2cool/slideshow/master/.xsession
+        wget --no-check-certificate https://raw.github.com/jb2cool/slideshow/master/files/.xsession
         
         # Insert the USB transfer stick (should have the label usb or you'll need to change some stuff)   
         echo "insert USB stick now"
