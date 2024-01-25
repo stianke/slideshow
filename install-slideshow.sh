@@ -34,6 +34,7 @@ cd $HOME
 
 # Copy sctipt that moves the mouse programmatically
 wget https://raw.githubusercontent.com/stianke/slideshow/master/files/movemouse.sh
+wget https://raw.githubusercontent.com/stianke/slideshow/master/files/next_slide_timer.sh
 
 # Make libreoffice config preset
 mkdir libreoffice_config

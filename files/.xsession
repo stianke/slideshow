@@ -45,6 +45,7 @@ fi
 # When loading the default config profile, it seems the mouse must move to initiate
 # the slideshow. Call a script that moves the mouse
 ./movemouse.sh &
+./next_slide_timer.sh $usb_path &
 
 # run forever
 while true; do
