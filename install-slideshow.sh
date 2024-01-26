@@ -35,6 +35,8 @@ cd $HOME
 # Copy sctipt that moves the mouse programmatically
 wget https://raw.githubusercontent.com/stianke/slideshow/master/files/movemouse.sh
 wget https://raw.githubusercontent.com/stianke/slideshow/master/files/next_slide_timer.sh
+chmod +x movemouse.sh
+chmod +x next_slide_timer.sh
 
 # Make libreoffice config preset
 mkdir libreoffice_config
@@ -43,7 +45,7 @@ mkdir libreoffice_config/4/user
 wget -P libreoffice_config/4/user https://raw.githubusercontent.com/stianke/slideshow/master/files/libreoffice_config/4/user/registrymodifications.xcu
 
 # Make directory to store presentations in
-mkdir presentations
+mkdir slideshow
 
 
 # Copy .xsession to /home/pi - assuming pi is the user id setup to run on bootup
