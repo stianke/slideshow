@@ -54,3 +54,6 @@ mkdir slideshow
 wget --no-check-certificate https://raw.github.com/stianke/slideshow/master/files/.xsession
 
 
+
+# Disable sleep
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target

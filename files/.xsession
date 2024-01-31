@@ -8,6 +8,9 @@
 xset s off
 xset -dpms
 
+xset dpms 0 0 0
+xset s noblank
+
 # start window manager in background
 matchbox-window-manager &
 

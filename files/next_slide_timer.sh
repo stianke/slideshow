@@ -16,14 +16,18 @@ elif [ "$(ls -A tmp)" ]; then
 elif test -f seconds.txt; then
 	seconds=$(cat seconds.txt)
 else
-        seconds=20
+        seconds=15
 fi
 
 echo $seconds
 
 
 while true; do
-        sleep $seconds
+        sleep $(($seconds-1))
+        xdotool mousemove_relative -- 0 -1
+        sleep 0.5
+        xdotool mousemove_relative 0 1
+        sleep 0.5
         xdotool key space
 done
 
