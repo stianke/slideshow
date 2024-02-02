@@ -18,6 +18,12 @@ sudo apt-get install rsync -y
 # LibreOffice - Office suite including presentation application
 sudo apt-get install libreoffice -y
 
+# PowerPoint to PDF converter (TODO: This may fail??? If so, manually install an older version of the library it tries to autoinstall)
+sudo pip install unoserver
+
+# PDF to PNG converter
+sudo apt-get install pdftoppm -y
+
 # USBmount - Mounts usb stick automatically
 sudo apt-get install usbmount -y
 
@@ -33,10 +39,8 @@ sudo apt-get install xdotool -y
 cd $HOME
 
 # Copy sctipt that moves the mouse programmatically
-wget https://raw.githubusercontent.com/stianke/slideshow/master/files/movemouse.sh
-wget https://raw.githubusercontent.com/stianke/slideshow/master/files/next_slide_timer.sh
-chmod +x movemouse.sh
-chmod +x next_slide_timer.sh
+wget https://raw.githubusercontent.com/stianke/slideshow/master/files/fetch_slideshow_interval.sh
+chmod +x fetch_slideshow_interval.sh
 
 # Make libreoffice config preset
 mkdir libreoffice_config
@@ -44,16 +48,21 @@ mkdir libreoffice_config/4
 mkdir libreoffice_config/4/user
 wget -P libreoffice_config/4/user https://raw.githubusercontent.com/stianke/slideshow/master/files/libreoffice_config/4/user/registrymodifications.xcu
 
-# Make directory to store presentations in
-mkdir slideshow
-
 
 # Copy .xsession to /home/pi - assuming pi is the user id setup to run on bootup
 # This script starts the display manager and syncs the default user home with a fresh copy from /media/usb/pi
 # It also deletes any previous LibreOffice config allowing clean start of slideshow
 wget --no-check-certificate https://raw.github.com/stianke/slideshow/master/files/.xsession
 
+wget https://raw.github.com/stianke/slideshow/master/files/default_image.png
+wget https://raw.github.com/stianke/slideshow/master/files/loading_presentation.png
 
+# Make directory to store presentations in
+mkdir slideshow
 
-# Disable sleep
+# Initialize with a dummy sha256sum.txt
+echo "dummy" > sha256sum.txt
+
+# Disable sleep (may not be neccesary)
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+
